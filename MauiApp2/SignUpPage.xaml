@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.SignUpPage"
+             MinimumHeightRequest="350"
+             MaximumWidthRequest="500"
+             Title="Cloudy">
+    <ContentPage.Content>
+        <Grid BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <StackLayout Spacing="10" Padding="20" Grid.Row="0" Margin="50">
+                <Label Text="Create an Account" FontSize="Large" HorizontalOptions="Center"/>
+                
+                <Entry Placeholder="Email" Keyboard="Email" WidthRequest="250"/>
+
+                <Entry Placeholder="Password" IsPassword="True" WidthRequest="250"/>
+
+                <Entry Placeholder="Confirm Password" IsPassword="True" WidthRequest="250"/>
+
+                <Button Text="Sign Up" Clicked="OnSignUpButtonClicked" WidthRequest="250"/>
+
+            </StackLayout>
+
+            <StackLayout  Grid.Row="1" Margin="50">
+                <Label Text="Already have an account?" HorizontalOptions="Center"/>
+
+                <Button Text="Log In" Clicked="OnLogInButtonClickedAsync" Margin="0,10,0,0" WidthRequest="250"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
